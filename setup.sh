@@ -40,6 +40,7 @@ echo -e "\033[32 Installing Docker CE...\033[0m"
 yum install -y yum-utils device-mapper-persistent-data lvm2
 yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 yum makecache fast
+rpm --import http://mirrors.163.com/centos/RPM-GPG-KEY-CentOS-7
 yum install -y docker-ce
 #开启docker
 systemctl start docker
