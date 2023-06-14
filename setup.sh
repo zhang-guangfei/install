@@ -70,7 +70,7 @@ java -version
 
 #安装Maven
 echo -e "\033[32 Installing Maven 3.8.3...\033[0m"
-curl -q -O /opt/apache-maven-3.8.3-bin.tar.gz https://archive.apache.org/dist/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz
+wget -q -O /opt/apache-maven-3.8.3-bin.tar.gz https://archive.apache.org/dist/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz
 sudo tar -xzvf /opt/apache-maven-3.8.3-bin.tar.gz -C /opt
 sudo tee /etc/profile.d/maven.sh <<-'EOF'
 export M2_HOME=/opt/apache-maven-3.8.3
