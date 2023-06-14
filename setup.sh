@@ -28,12 +28,12 @@ wget -q -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 yum clean all && yum makecache  
 #查看当前源
 yum repolist
-yum -y update
 
 #安装常用工具
 yum provides '*/applydeltarpm'  
 yum group install -y  "Development Tools"
 yum -y install vim gcc gcc-c++ zlib-devel curl-devel vim-enhanced net-tools screen
+yum -y update
 
 #安装docker
 echo -e "\033[32 Installing Docker CE...\033[0m"
